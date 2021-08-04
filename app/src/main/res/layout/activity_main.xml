@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlGreetings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Kita belum kenalan nih"
+            android:textColor="#313333"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignStart="@+id/tvTitle"
+            android:fontFamily="@font/roboto"
+            android:text="Biar kita makin akrab, kasih tau dong nama kamu!\nIsi di kolom dibawah ini yaa ^_^"
+            android:textColor="#8F9090" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Hai, Gusman"
+            android:textColor="#313333"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_alignStart="@+id/tvName"
+            android:fontFamily="@font/roboto"
+            android:text="Salam kenal ya, semoga kita bisa makin akrab ^_^"
+            android:textColor="#8F9090" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/illustration_background" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="250dp"
+        android:src="@drawable/illustration_people" />
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/ButtonDefault"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/big"
+        android:layout_marginEnd="@dimen/big"
+        android:layout_marginBottom="@dimen/big"
+        android:text="Simpan" />
+
+    <EditText
+        android:id="@+id/etName"
+        style="@style/EditTextDefault.SingleLine"
+        android:layout_above="@+id/btnSave"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Isi namamu disini" />
+
+</RelativeLayout>
